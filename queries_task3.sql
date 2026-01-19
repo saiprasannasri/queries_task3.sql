@@ -1,0 +1,10 @@
+SELECT * FROM superstore_db.superstore_db;
+SELECT * FROM superstore_db.superstore_db LIMIT 5;
+SELECT COUNT(*) AS total_records FROM superstore_db.superstore_db;
+SELECT * FROM superstore_db.superstore_db WHERE Category = 'Technology';
+SELECT Category, SUM(Sales) AS Total_Sales FROM superstore_db.superstore_db GROUP BY Category;
+SELECT Category, AVG(Profit) AS Avg_Profit FROM superstore_db.superstore_db GROUP BY Category;
+SELECT Region, COUNT(*) AS Total_Orders FROM superstore_db.superstore_db GROUP BY Region;
+SELECT Category, SUM(Sales) AS Total_Sales FROM superstore_db.superstore_db GROUP BY Category HAVING SUM(Sales) > 100000;
+SELECT * FROM superstore_db.superstore_db WHERE OrderDate BETWEEN '2015-04-26' AND '2015-11-26';
+SELECT Customer Name FROM superstore_db.superstore_db WHERE CustomerName LIKE 'A%';
